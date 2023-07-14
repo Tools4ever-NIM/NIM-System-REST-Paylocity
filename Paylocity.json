@@ -1,0 +1,77 @@
+{
+    "schema": {
+        "options": {},
+        "crud_objects": {
+            "employees": {
+                "operations": {
+                    "employeesList": {
+                        "method": "get",
+                        "call": {
+                            "path": "/companies/{company_id}/employees"
+                        },
+                        "processing_options": {
+                            "output_field": null
+                        },
+                        "query_parameters": {
+                        }
+                    }
+                },
+                "parameters": {},
+                "key": "employeeId",
+                "resources": {
+                    "employeeId": "string*",
+                    "statusCode": "string*",
+                    "statusTypeCode": "string*"
+                }
+            }
+        }
+    },
+    "rest": {
+        "config": {
+            "baseUrl": "https://{tenant_id}/api/v2",
+            "get": {
+                "query_parameters": {
+                },
+                "pagination": {
+                    "mode": "link",
+                    "path":[],
+                    "page_size":"{page_size}"
+                }
+            },
+            "authentication": "client_credentials",
+            "call_handling": "generic",
+            "test_connection": {
+                "url": "/companies/{company_id}/employees?pageSize=1&pageNumber=0"
+            },
+            "accept": "application/json"
+        },
+        "authOptions": {
+            "authUrl": "https://{token_uri}",
+            "directToken": true,
+            "scopes": [ "WebLinkAPI" ]
+        }
+        
+    },
+    "connection": {
+        "items": [
+            {
+                "name": "page_size",
+                "type": "textbox",
+                "label": "Page Size:",
+                "value": "1000"
+            },
+            {
+                "name": "token_uri",
+                "type": "textbox",
+                "label": "OAuth Token URI",
+                "value": "api.paylocity.com/oauth/token"
+            },
+            {
+                "name": "company_id",
+                "type": "textbox",
+                "label": "Company ID",
+                "value": ""
+            }
+        ]
+    }
+}
