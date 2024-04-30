@@ -434,22 +434,19 @@
         "config": {
             "baseUrl": "https://{tenant_id}/api/v2",
             "get": {
-                "query_parameters": {
-                },
-                "pagination":{
-                    "mode":"generic",
+               "query_parameters": {},
+                "pagination": {
+                    "mode": "link",
                     "path":[],
-                    "params":{
-                        "pageNumber":"{page_number}",
-                        "pageSize":"{page_size}"
-                    }
+                    "page_size":"{page_size}"
                 }
             },
             "authentication": "client_credentials",
             "call_handling": "generic",
             "test_connection": {
-                "url": "/companies/{company_id}/employees?pageSize=1&pageNumber=0"
+                "url": "/companies/{company_id}/employees?pageSize=1"
             },
+            "socket_timeout": 3600000,
             "accept": "application/json",
             "retry": [
                 {
