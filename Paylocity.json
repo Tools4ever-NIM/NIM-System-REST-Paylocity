@@ -1,495 +1,491 @@
 {
-    "schema": {
-        "options": {},
-        "crud_objects": {
-            "costcenter1": {
-                "operations": {
-                    "costcenter1List": {
-                        "method": "get",
-                        "call": {
-                            "path": "/companies/{company_id}/codes/costcenter1"
-                        },
-                        "processing_options": {
-                            "output_field": null
-                        },
-                        "query_parameters": {
-                        }
-                    }
-                },
-                "parameters": {},
-                "key": "code",
-                "resources": {
-                    "code": "string*",
-                    "description": "string*"
-                }
+  "schema": {
+    "options": {},
+    "crud_objects": {
+      "costcenter1": {
+        "operations": {
+          "costcenter1List": {
+            "method": "get",
+            "call": {
+              "path": "/companies/{company_id}/codes/costcenter1"
             },
-            "costcenter2": {
-                "operations": {
-                    "costcenter2List": {
-                        "method": "get",
-                        "call": {
-                            "path": "/companies/{company_id}/codes/costcenter2"
-                        },
-                        "processing_options": {
-                            "output_field": null
-                        },
-                        "query_parameters": {
-                        }
-                    }
-                },
-                "parameters": {},
-                "key": "code",
-                "resources": {
-                    "code": "string*",
-                    "description": "string*"
-                }
+            "processing_options": {
+              "output_field": null
             },
-            "costcenter3": {
-                "operations": {
-                    "costcenter3List": {
-                        "method": "get",
-                        "call": {
-                            "path": "/companies/{company_id}/codes/costcenter3"
-                        },
-                        "processing_options": {
-                            "output_field": null
-                        },
-                        "query_parameters": {
-                        }
-                    }
-                },
-                "parameters": {},
-                "key": "code",
-                "resources": {
-                    "code": "string*",
-                    "description": "string*"
-                }
-            },
-            "employees": {
-                "operations": {
-                    "employeesList": {
-                        "method": "get",
-                        "call": {
-                            "path": "/companies/{company_id}/employees"
-                        },
-                        "processing_options": {
-                            "output_field": null
-                        },
-                        "query_parameters": {
-                        }
-                    }
-                },
-                "parameters": {},
-                "key": "employeeId",
-                "resources": {
-                    "employeeId": "string*",
-                    "statusCode": "string*",
-                    "statusTypeCode": "string*"
-                }
-            },
-            "employeeDetails": {
-                "operations": {
-                    "employeesList": {
-                        "method": "get",
-                        "call": {
-                            "mode": "iteration",
-                            "table": "employees",
-                            "path": "/companies/{company_id}/employees/{iterator}",
-                            "iterator": "employeeId"
-                        },
-                        "processing_options": {
-                            "output_field": null
-                        },
-                        "query_parameters": {
-                        },
-                        "maxSessionCount": 20
-                    }
-                },
-                "parameters": {},
-                "key": "employeeId",
-                "resources": {
-                    "additionalDirectDeposit": [
-                        {
-                          "accountNumber": "_:string*",
-                          "accountType": "_:string*",
-                          "amount": "_:string*",
-                          "amountType": "_:string*",
-                          "blockSpecial": "_:string*",
-                          "isSkipPreNote": "_:string*",
-                          "nameOnAccount": "_:string*",
-                          "preNoteDate": "_:string*",
-                          "routingNumber": "_:string*"
-                        }
-                      ],
-                      "additionalRate": [
-                        {
-                          "changeReason": "_:string*",
-                          "costCenter1": "_:string*",
-                          "costCenter2": "_:string*",
-                          "costCenter3": "_:string*",
-                          "effectiveDate": "_:string*",
-                          "endCheckDate": "_:string*",
-                          "job": "_:string*",
-                          "rate": "_:string*",
-                          "rateCode": "_:string*",
-                          "rateNotes": "_:string*",
-                          "ratePer": "_:string*",
-                          "shift": "_:string*"
-                        }
-                      ],
-                      "benefitSetup": {
-                        "benefitClass": "_:string*",
-                        "benefitClassEffectiveDate": "_:string*",
-                        "benefitSalary": "_:string*",
-                        "benefitSalaryEffectiveDate": "_:string*",
-                        "doNotApplyAdministrativePeriod": "_:string*",
-                        "isMeasureAcaEligibility": "_:string*"
-                      },
-                      "birthDate": "string*",
-                      "companyFEIN": "string*",
-                      "companyName": "string*",
-                      "currency": "string*",
-                      "customBooleanFields": [
-                        {
-                          "label": "string*",
-                          "value": "string*"
-                        }
-                      ],
-                      "customDateFields": [
-                        {
-                          "label": "string*",
-                          "value": "string*"
-                        }
-                      ],
-                      "customDropDownFields": [
-                        {
-                          "label": "string*",
-                          "value": "string*"
-                        }
-                      ],
-                      "customNumberFields": [
-                        {
-                          "label": "string*",
-                          "value": "string*"
-                        }
-                      ],
-                      "customTextFields": [
-                        {
-                          "label": "string*",
-                          "value": "string*"
-                        }
-                      ],
-                      "departmentPosition": {
-                        "changeReason": "_:string*",
-                        "clockBadgeNumber": "_:string*",
-                        "costCenter1": "_:string*",
-                        "costCenter2": "_:string*",
-                        "costCenter3": "_:string*",
-                        "effectiveDate": "_:string*",
-                        "employeeType": "_:string*",
-                        "equalEmploymentOpportunityClass": "_:string*",
-                        "isMinimumWageExempt": "_:string*",
-                        "isOvertimeExempt": "_:string*",
-                        "isSupervisorReviewer": "_:string*",
-                        "isUnionDuesCollected": "_:string*",
-                        "isUnionInitiationCollected": "_:string*",
-                        "jobTitle": "_:string*",
-                        "payGroup": "_:string*",
-                        "positionCode": "_:string*",
-                        "reviewerCompanyNumber": "_:string*",
-                        "reviewerEmployeeId": "_:string*",
-                        "shift": "_:string*",
-                        "supervisorCompanyNumber": "_:string*",
-                        "supervisorEmployeeId": "_:string*",
-                        "tipped": "_:string*",
-                        "unionAffiliationDate": "_:string*",
-                        "unionCode": "_:string*",
-                        "unionPosition": "_:string*",
-                        "workersCompensation": "_:string*"
-                      },
-                      "disabilityDescription": "string*",
-                      "emergencyContacts": [
-                        {
-                          "address1": "string*",
-                          "address2": "string*",
-                          "city": "string*",
-                          "country": "string*",
-                          "county": "string*",
-                          "email": "string*",
-                          "firstName": "string*",
-                          "homePhone": "string*",
-                          "lastName": "string*",
-                          "mobilePhone": "string*",
-                          "notes": "string*",
-                          "pager": "string*",
-                          "primaryPhone": "string*",
-                          "priority": "string*",
-                          "relationship": "string*",
-                          "state": "string*",
-                          "syncEmployeeInfo": "boolean*",
-                          "workExtension": "string*",
-                          "workPhone": "string*",
-                          "zip": "string*"
-                        }
-                      ],
-                      "employeeId": "string*",
-                      "ethnicity": "string*",
-                      "federalTax": {
-                        "amount": "_:string*",
-                        "deductionsAmount": "_:string*",
-                        "dependentsAmount": "_:string*",
-                        "exemptions": "_:string*",
-                        "filingStatus": "_:string*",
-                        "higherRate": "_:boolean*",
-                        "otherIncomeAmount": "_:string*",
-                        "percentage": "_:string*",
-                        "taxCalculationCode": "_:string*",
-                        "w4FormYear": "_:string*"
-                      },
-                      "firstName": "string*",
-                      "gender": "string*",
-                      "homeAddress": {
-                        "address1": "_:string*",
-                        "address2": "_:string*",
-                        "city": "_:string*",
-                        "country": "_:string*",
-                        "county": "_:string*",
-                        "emailAddress": "_:string*",
-                        "mobilePhone": "_:string*",
-                        "phone": "_:string*",
-                        "postalCode": "_:string*",
-                        "state": "_:string*"
-                      },
-                      "isHighlyCompensated": "boolean*",
-                      "isSmoker": "boolean*",
-                      "lastName": "string*",
-                      "localTax": [
-                        {
-                          "exemptions": "string*",
-                          "exemptions2": "string*",
-                          "filingStatus": "string*",
-                          "residentPSD": "string*",
-                          "taxCode": "string*",
-                          "workPSD": "string*"
-                        }
-                      ],
-                      "mainDirectDeposit": {
-                        "accountNumber": "_:string*",
-                        "accountType": "_:string*",
-                        "blockSpecial": "_:string*",
-                        "isSkipPreNote": "_:string*",
-                        "nameOnAccount": "_:string*",
-                        "preNoteDate": "_:string*",
-                        "routingNumber": "_:string*"
-                      },
-                      "maritalStatus": "string*",
-                      "middleName": "string*",
-                      "nonPrimaryStateTax": {
-                        "amount": "_:string*",
-                        "deductionsAmount": "_:string*",
-                        "dependentsAmount": "_:string*",
-                        "exemptions": "_:string*",
-                        "exemptions2": "_:string*",
-                        "filingStatus": "_:string*",
-                        "higherRate": "boolean*",
-                        "otherIncomeAmount": "_:string*",
-                        "percentage": "_:string*",
-                        "reciprocityCode": "_:string*",
-                        "specialCheckCalc": "_:string*",
-                        "taxCalculationCode": "_:string*",
-                        "taxCode": "_:string*",
-                        "w4FormYear": "_:string*"
-                      },
-                      "ownerPercent": "string*",
-                      "preferredName": "string*",
-                      "primaryPayRate": {
-                        "annualSalary": "_:string*",
-                        "baseRate": "_:string*",
-                        "beginCheckDate": "_:string*",
-                        "changeReason": "_:string*",
-                        "defaultHours": "_:string*",
-                        "effectiveDate": "_:string*",
-                        "isAutoPay": "_:string*",
-                        "payFrequency": "_:string*",
-                        "payGrade": "_:string*",
-                        "payRateNote": "_:string*",
-                        "payType": "_:string*",
-                        "ratePer": "_:string*",
-                        "salary": "_:string*"
-                      },
-                      "primaryStateTax": {
-                        "amount": "_:string*",
-                        "deductionsAmount": "_:string*",
-                        "dependentsAmount": "_:string*",
-                        "exemptions": "_:string*",
-                        "exemptions2": "_:string*",
-                        "filingStatus": "_:string*",
-                        "higherRate": "boolean*",
-                        "otherIncomeAmount": "_:string*",
-                        "percentage": "_:string*",
-                        "specialCheckCalc": "_:string*",
-                        "taxCalculationCode": "_:string*",
-                        "taxCode": "_:string*",
-                        "w4FormYear": "_:string*"
-                      },
-                      "priorLastName": "string*",
-                      "salutation": "string*",
-                      "ssn": "string",
-                      "status": {
-                        "adjustedSeniorityDate": "_:string*",
-                        "changeReason": "_:string*",
-                        "effectiveDate": "_:string*",
-                        "employeeStatus": "_:string*",
-                        "hireDate": "_:string*",
-                        "isEligibleForRehire": "_:string*",
-                        "reHireDate": "_:string*",
-                        "statusType": "_:string*",
-                        "terminationDate": "_:string*"
-                      },
-                      "suffix": "string*",
-                      "taxSetup": {
-                        "fitwExemptNotes": "_:string*",
-                        "fitwExemptReason": "_:string*",
-                        "futaExemptNotes": "_:string*",
-                        "futaExemptReason": "_:string*",
-                        "isEmployee943": "boolean*",
-                        "isPension": "boolean*",
-                        "isStatutory": "boolean*",
-                        "medExemptNotes": "_:string*",
-                        "medExemptReason": "_:string*",
-                        "sitwExemptNotes": "_:string*",
-                        "sitwExemptReason": "_:string*",
-                        "ssExemptNotes": "_:string*",
-                        "ssExemptReason": "_:string*",
-                        "suiExemptNotes": "_:string*",
-                        "suiExemptReason": "_:string*",
-                        "suiState": "_:string*",
-                        "taxDistributionCode1099R": "_:string*",
-                        "taxForm": "_:string*"
-                      },
-                      "veteranDescription": "string*",
-                      "webTime": {
-                        "badgeNumber": "_:string*",
-                        "chargeRate": "_:string*",
-                        "isTimeLaborEnabled": "_:string*"
-                      },
-                      "workAddress": {
-                        "address1": "_:string*",
-                        "address2": "_:string*",
-                        "city": "_:string*",
-                        "country": "_:string*",
-                        "county": "_:string*",
-                        "emailAddress": "_:string*",
-                        "location": "_:string*",
-                        "mailStop": "_:string*",
-                        "mobilePhone": "_:string*",
-                        "pager": "_:string*",
-                        "phone": "_:string*",
-                        "phoneExtension": "_:string*",
-                        "postalCode": "_:string*",
-                        "state": "_:string*"
-                      },
-                      "workEligibility": {
-                        "alienOrAdmissionDocumentNumber": "_:string*",
-                        "attestedDate": "_:string*",
-                        "countryOfIssuance": "_:string*",
-                        "foreignPassportNumber": "_:string*",
-                        "i94AdmissionNumber": "_:string*",
-                        "i9DateVerified": "_:string*",
-                        "i9Notes": "_:string*",
-                        "isI9Verified": "_:string*",
-                        "isSsnVerified": "_:string*",
-                        "ssnDateVerified": "_:string*",
-                        "ssnNotes": "_:string*",
-                        "visaType": "_:string*",
-                        "workAuthorization": "_:string*",
-                        "workUntil": "_:string*"
-                      }
-                }
-            },
-            "positions": {
-                "operations": {
-                    "positionsList": {
-                        "method": "get",
-                        "call": {
-                            "path": "/companies/{company_id}/codes/positions"
-                        },
-                        "processing_options": {
-                            "output_field": null
-                        },
-                        "query_parameters": {
-                        }
-                    }
-                },
-                "parameters": {},
-                "key": "code",
-                "resources": {
-                    "code": "string*",
-                    "description": "string*"
-                }
-            }
-        }
-    },
-    "rest": {
-        "config": {
-            "baseUrl": "https://{tenant_id}/api/v2",
-            "get": {
-               "query_parameters": {},
-                "pagination": {
-                    "mode": "link",
-                    "path":[],
-                    "page_size":"{page_size}"
-                }
-            },
-            "authentication": "client_credentials",
-            "call_handling": "generic",
-            "test_connection": {
-                "url": "/companies/{company_id}/employees?pageSize=1"
-            },
-            "socket_timeout": 3600000,
-            "accept": "application/json",
-            "retry": [
-                {
-                    "type": "statusCode",
-                    "statusCode": 429,
-                    "retry": {
-                        "type": "simple",
-                        "maxCount": 12,
-                        "waitTime": 5
-                    }
-                },
-                {
-                    "type": "connectionError"
-                }
-            ]
+            "query_parameters": {}
+          }
         },
-        "authOptions": {
-            "authUrl": "https://{token_uri}",
-            "directToken": true,
-            "scopes": [ "WebLinkAPI" ]
+        "parameters": {},
+        "key": "code",
+        "resources": {
+          "code": "string*",
+          "description": "string*"
         }
-        
-    },
-    "connection": {
-        "items": [
-            {
-                "name": "page_size",
-                "type": "textbox",
-                "label": "Page Size:",
-                "value": "1000"
+      },
+      "costcenter2": {
+        "operations": {
+          "costcenter2List": {
+            "method": "get",
+            "call": {
+              "path": "/companies/{company_id}/codes/costcenter2"
             },
-            {
-                "name": "token_uri",
-                "type": "textbox",
-                "label": "OAuth Token URI",
-                "value": "api.paylocity.com/IdentityServer/connect/token"
+            "processing_options": {
+              "output_field": null
             },
+            "query_parameters": {}
+          }
+        },
+        "parameters": {},
+        "key": "code",
+        "resources": {
+          "code": "string*",
+          "description": "string*"
+        }
+      },
+      "costcenter3": {
+        "operations": {
+          "costcenter3List": {
+            "method": "get",
+            "call": {
+              "path": "/companies/{company_id}/codes/costcenter3"
+            },
+            "processing_options": {
+              "output_field": null
+            },
+            "query_parameters": {}
+          }
+        },
+        "parameters": {},
+        "key": "code",
+        "resources": {
+          "code": "string*",
+          "description": "string*"
+        }
+      },
+      "employees": {
+        "operations": {
+          "employeesList": {
+            "method": "get",
+            "call": {
+              "path": "/companies/{company_id}/employees"
+            },
+            "processing_options": {
+              "output_field": null
+            },
+            "query_parameters": {}
+          }
+        },
+        "parameters": {},
+        "key": "employeeId",
+        "resources": {
+          "employeeId": "string*",
+          "statusCode": "string*",
+          "statusTypeCode": "string*"
+        }
+      },
+      "employeeDetails": {
+        "operations": {
+          "employeesList": {
+            "method": "get",
+            "call": {
+              "mode": "iteration",
+              "table": "employees",
+              "path": "/companies/{company_id}/employees/{iterator}",
+              "iterator": "employeeId"
+            },
+            "processing_options": {
+              "output_field": null
+            },
+            "query_parameters": {},
+            "maxSessionCount": 20
+          }
+        },
+        "parameters": {},
+        "key": "employeeId",
+        "resources": {
+          "additionalDirectDeposit": [
             {
-                "name": "company_id",
-                "type": "textbox",
-                "label": "Company ID",
-                "value": ""
+              "accountNumber": "_:string*",
+              "accountType": "_:string*",
+              "amount": "_:string*",
+              "amountType": "_:string*",
+              "blockSpecial": "_:string*",
+              "isSkipPreNote": "_:string*",
+              "nameOnAccount": "_:string*",
+              "preNoteDate": "_:string*",
+              "routingNumber": "_:string*"
             }
-        ]
+          ],
+          "additionalRate": [
+            {
+              "changeReason": "_:string*",
+              "costCenter1": "_:string*",
+              "costCenter2": "_:string*",
+              "costCenter3": "_:string*",
+              "effectiveDate": "_:string*",
+              "endCheckDate": "_:string*",
+              "job": "_:string*",
+              "rate": "_:string*",
+              "rateCode": "_:string*",
+              "rateNotes": "_:string*",
+              "ratePer": "_:string*",
+              "shift": "_:string*"
+            }
+          ],
+          "benefitSetup": {
+            "benefitClass": "_:string*",
+            "benefitClassEffectiveDate": "_:string*",
+            "benefitSalary": "_:string*",
+            "benefitSalaryEffectiveDate": "_:string*",
+            "doNotApplyAdministrativePeriod": "_:string*",
+            "isMeasureAcaEligibility": "_:string*"
+          },
+          "birthDate": "string*",
+          "companyFEIN": "string*",
+          "companyName": "string*",
+          "currency": "string*",
+          "customBooleanFields": [
+            {
+              "label": "string*",
+              "value": "string*"
+            }
+          ],
+          "customDateFields": [
+            {
+              "label": "string*",
+              "value": "string*"
+            }
+          ],
+          "customDropDownFields": [
+            {
+              "label": "string*",
+              "value": "string*"
+            }
+          ],
+          "customNumberFields": [
+            {
+              "label": "string*",
+              "value": "string*"
+            }
+          ],
+          "customTextFields": [
+            {
+              "label": "string*",
+              "value": "string*"
+            }
+          ],
+          "departmentPosition": {
+            "changeReason": "_:string*",
+            "clockBadgeNumber": "_:string*",
+            "costCenter1": "_:string*",
+            "costCenter2": "_:string*",
+            "costCenter3": "_:string*",
+            "effectiveDate": "_:string*",
+            "employeeType": "_:string*",
+            "equalEmploymentOpportunityClass": "_:string*",
+            "isMinimumWageExempt": "_:string*",
+            "isOvertimeExempt": "_:string*",
+            "isSupervisorReviewer": "_:string*",
+            "isUnionDuesCollected": "_:string*",
+            "isUnionInitiationCollected": "_:string*",
+            "jobTitle": "_:string*",
+            "payGroup": "_:string*",
+            "positionCode": "_:string*",
+            "reviewerCompanyNumber": "_:string*",
+            "reviewerEmployeeId": "_:string*",
+            "shift": "_:string*",
+            "supervisorCompanyNumber": "_:string*",
+            "supervisorEmployeeId": "_:string*",
+            "tipped": "_:string*",
+            "unionAffiliationDate": "_:string*",
+            "unionCode": "_:string*",
+            "unionPosition": "_:string*",
+            "workersCompensation": "_:string*"
+          },
+          "disabilityDescription": "string*",
+          "emergencyContacts": [
+            {
+              "address1": "string*",
+              "address2": "string*",
+              "city": "string*",
+              "country": "string*",
+              "county": "string*",
+              "email": "string*",
+              "firstName": "string*",
+              "homePhone": "string*",
+              "lastName": "string*",
+              "mobilePhone": "string*",
+              "notes": "string*",
+              "pager": "string*",
+              "primaryPhone": "string*",
+              "priority": "string*",
+              "relationship": "string*",
+              "state": "string*",
+              "syncEmployeeInfo": "boolean*",
+              "workExtension": "string*",
+              "workPhone": "string*",
+              "zip": "string*"
+            }
+          ],
+          "employeeId": "string*",
+          "ethnicity": "string*",
+          "federalTax": {
+            "amount": "_:string*",
+            "deductionsAmount": "_:string*",
+            "dependentsAmount": "_:string*",
+            "exemptions": "_:string*",
+            "filingStatus": "_:string*",
+            "higherRate": "_:boolean*",
+            "otherIncomeAmount": "_:string*",
+            "percentage": "_:string*",
+            "taxCalculationCode": "_:string*",
+            "w4FormYear": "_:string*"
+          },
+          "firstName": "string*",
+          "gender": "string*",
+          "homeAddress": {
+            "address1": "_:string*",
+            "address2": "_:string*",
+            "city": "_:string*",
+            "country": "_:string*",
+            "county": "_:string*",
+            "emailAddress": "_:string*",
+            "mobilePhone": "_:string*",
+            "phone": "_:string*",
+            "postalCode": "_:string*",
+            "state": "_:string*"
+          },
+          "isHighlyCompensated": "boolean*",
+          "isSmoker": "boolean*",
+          "lastName": "string*",
+          "localTax": [
+            {
+              "exemptions": "string*",
+              "exemptions2": "string*",
+              "filingStatus": "string*",
+              "residentPSD": "string*",
+              "taxCode": "string*",
+              "workPSD": "string*"
+            }
+          ],
+          "mainDirectDeposit": {
+            "accountNumber": "_:string*",
+            "accountType": "_:string*",
+            "blockSpecial": "_:string*",
+            "isSkipPreNote": "_:string*",
+            "nameOnAccount": "_:string*",
+            "preNoteDate": "_:string*",
+            "routingNumber": "_:string*"
+          },
+          "maritalStatus": "string*",
+          "middleName": "string*",
+          "nonPrimaryStateTax": {
+            "amount": "_:string*",
+            "deductionsAmount": "_:string*",
+            "dependentsAmount": "_:string*",
+            "exemptions": "_:string*",
+            "exemptions2": "_:string*",
+            "filingStatus": "_:string*",
+            "higherRate": "boolean*",
+            "otherIncomeAmount": "_:string*",
+            "percentage": "_:string*",
+            "reciprocityCode": "_:string*",
+            "specialCheckCalc": "_:string*",
+            "taxCalculationCode": "_:string*",
+            "taxCode": "_:string*",
+            "w4FormYear": "_:string*"
+          },
+          "ownerPercent": "string*",
+          "preferredName": "string*",
+          "primaryPayRate": {
+            "annualSalary": "_:string*",
+            "baseRate": "_:string*",
+            "beginCheckDate": "_:string*",
+            "changeReason": "_:string*",
+            "defaultHours": "_:string*",
+            "effectiveDate": "_:string*",
+            "isAutoPay": "_:string*",
+            "payFrequency": "_:string*",
+            "payGrade": "_:string*",
+            "payRateNote": "_:string*",
+            "payType": "_:string*",
+            "ratePer": "_:string*",
+            "salary": "_:string*"
+          },
+          "primaryStateTax": {
+            "amount": "_:string*",
+            "deductionsAmount": "_:string*",
+            "dependentsAmount": "_:string*",
+            "exemptions": "_:string*",
+            "exemptions2": "_:string*",
+            "filingStatus": "_:string*",
+            "higherRate": "boolean*",
+            "otherIncomeAmount": "_:string*",
+            "percentage": "_:string*",
+            "specialCheckCalc": "_:string*",
+            "taxCalculationCode": "_:string*",
+            "taxCode": "_:string*",
+            "w4FormYear": "_:string*"
+          },
+          "priorLastName": "string*",
+          "salutation": "string*",
+          "ssn": "string",
+          "status": {
+            "adjustedSeniorityDate": "_:string*",
+            "changeReason": "_:string*",
+            "effectiveDate": "_:string*",
+            "employeeStatus": "_:string*",
+            "hireDate": "_:string*",
+            "isEligibleForRehire": "_:string*",
+            "reHireDate": "_:string*",
+            "statusType": "_:string*",
+            "terminationDate": "_:string*"
+          },
+          "suffix": "string*",
+          "taxSetup": {
+            "fitwExemptNotes": "_:string*",
+            "fitwExemptReason": "_:string*",
+            "futaExemptNotes": "_:string*",
+            "futaExemptReason": "_:string*",
+            "isEmployee943": "boolean*",
+            "isPension": "boolean*",
+            "isStatutory": "boolean*",
+            "medExemptNotes": "_:string*",
+            "medExemptReason": "_:string*",
+            "sitwExemptNotes": "_:string*",
+            "sitwExemptReason": "_:string*",
+            "ssExemptNotes": "_:string*",
+            "ssExemptReason": "_:string*",
+            "suiExemptNotes": "_:string*",
+            "suiExemptReason": "_:string*",
+            "suiState": "_:string*",
+            "taxDistributionCode1099R": "_:string*",
+            "taxForm": "_:string*"
+          },
+          "veteranDescription": "string*",
+          "webTime": {
+            "badgeNumber": "_:string*",
+            "chargeRate": "_:string*",
+            "isTimeLaborEnabled": "_:string*"
+          },
+          "workAddress": {
+            "address1": "_:string*",
+            "address2": "_:string*",
+            "city": "_:string*",
+            "country": "_:string*",
+            "county": "_:string*",
+            "emailAddress": "_:string*",
+            "location": "_:string*",
+            "mailStop": "_:string*",
+            "mobilePhone": "_:string*",
+            "pager": "_:string*",
+            "phone": "_:string*",
+            "phoneExtension": "_:string*",
+            "postalCode": "_:string*",
+            "state": "_:string*"
+          },
+          "workEligibility": {
+            "alienOrAdmissionDocumentNumber": "_:string*",
+            "attestedDate": "_:string*",
+            "countryOfIssuance": "_:string*",
+            "foreignPassportNumber": "_:string*",
+            "i94AdmissionNumber": "_:string*",
+            "i9DateVerified": "_:string*",
+            "i9Notes": "_:string*",
+            "isI9Verified": "_:string*",
+            "isSsnVerified": "_:string*",
+            "ssnDateVerified": "_:string*",
+            "ssnNotes": "_:string*",
+            "visaType": "_:string*",
+            "workAuthorization": "_:string*",
+            "workUntil": "_:string*"
+          }
+        }
+      },
+      "positions": {
+        "operations": {
+          "positionsList": {
+            "method": "get",
+            "call": {
+              "path": "/companies/{company_id}/codes/positions"
+            },
+            "processing_options": {
+              "output_field": null
+            },
+            "query_parameters": {}
+          }
+        },
+        "parameters": {},
+        "key": "code",
+        "resources": {
+          "code": "string*",
+          "description": "string*"
+        }
+      }
     }
+  },
+  "rest": {
+    "config": {
+      "baseUrl": "https://{tenant_id}/api/v2",
+      "get": {
+        "query_parameters": {
+        },
+        "pagination": {
+                "mode": "link",
+                "path":[],
+                "page_size":"{page_size}"
+        }
+      },
+      "authentication": "client_credentials",
+      "call_handling": "generic",
+      "test_connection": {
+        "url": "/companies/{company_id}/employees?pageSize=1"
+      },
+      "socket_timeout": 3600000,
+      "accept": "application/json",
+      "retry": [
+        {
+          "type": "statusCode",
+          "statusCode": 429,
+          "retry": {
+            "type": "simple",
+            "maxCount": 12,
+            "waitTime": 5
+          }
+        },
+        {
+          "type": "connectionError"
+        }
+      ]
+    },
+    "authOptions": {
+      "authUrl": "https://{token_uri}",
+      "directToken": true,
+      "scopes": [
+        "WebLinkAPI"
+      ]
+    }
+  },
+  "connection": {
+    "items": [
+      {
+        "name": "page_size",
+        "type": "textbox",
+        "label": "Page Size:",
+        "value": "1000"
+      },
+      {
+        "name": "token_uri",
+        "type": "textbox",
+        "label": "OAuth Token URI",
+        "value": "api.paylocity.com/IdentityServer/connect/token"
+      },
+      {
+        "name": "company_id",
+        "type": "textbox",
+        "label": "Company ID",
+        "value": ""
+      }
+    ]
+  }
 }
