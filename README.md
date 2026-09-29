@@ -1,5 +1,7 @@
 # Paylocity
 
+Read the [Paylocity integration documentation](https://docs.nimsuite.com/en/integrations/paylocity) for connector details and related guides.
+
 <img src="https://github.com/Tools4ever-NIM/NIM-System-REST-Paylocity/assets/24281600/a4a46885-c99e-45c7-a7e9-7e46c8665e83" width="256px" />
 
 
